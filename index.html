@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8">
+
+  <title>Movie Trivia</title>
+
+ 
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap-grid.min.css.map" />
+ 
+</head>
+
+<body>
+        <div class='jumbotron'>
+                <div class='container'>
+                  <h1>Trivia Game</h1>
+                  <h2>Guess</h2>
+                </div>
+              </div>
+    <div id="show-number"></div>
+    
+    <div class="container">
+        <div id = "main-content"></div>
+    </div>
+
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script type="text/javascript" src="assets/javascript/app.js"></script>
+    
+
+
+    <script>
+   
+   var number = 120;
+    
+    var intervalId;
+
+    function run() {
+        clearInterval(intervalId);
+        intervalId = setInterval(decrement, 1000);
+    }
+
+    function decrement() {
+        number--;
+
+    $("#show-number").html("<h2>" + number + "</h2>");
+
+    if (number === 0) {
+        stop();
+        alert("Time Up!");
+
+        
+        var correctAnswers = 0;
+        var incorrectAnswers = 0;
+        var quizOver = false;
+    }
+}    
+run();
+
+
+</script>
+</body>
+
+</html>
